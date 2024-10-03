@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List </title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- indivisual Task categories -->
+    <div
+        class="taskCategory relative md:relative bg-gray-300 min-w-[70%] h-screen rounded-3xl md:rounded-none overflow-hidden">
+        <!-- Head Wrapper -->
+        <div class="hidden absolute md:block bg-fuchsia-700 md:max-h-screen md:w-[30%] h-screen md:left-0"></div>
+        <div class="min-w-[100%] md:min-w-[70%] md:left-[30%] absolute  h-[20vh] bg-yellow-200 rounded-b-[40%]">
+
+            <img class="backbtn mx-10 mt-5 ring-2 ring-offset-gray-700 hover:ring-red-950 rounded-lg"
+                src="images/back.png" alt="3_dash" width="30px" height="10px">
+            <div class=" float-right mr-[3rem] -mt-[12rem] rounded-full bg-white w-[75px] h-[75px] "></div>
+            <img class="float-right w-[80px] h-[80px] mr-[2.9rem] -mt-[12rem] " src="images/person.png" alt="preson">
+            <img class="float-right mr-10  -mt-6" src="images/dot3.png" alt="dot3" width="25px" height="25px">
+        </div>
+
+        <!-- indivisual Task -->
+        <div class="mt-[10rem] absolute left-[5%] md:min-w-[70%] md:left-[30%]
+         min-w-[90%] h-[70%] flex justify-center rounded-2xl">
+            <div id="xyz" class="mx-auto md:mx-auto -mt-14 text-xl  w-[85%] md:w-[85%] p-2
+                    rounded-xl  py-4 ">
+                <img id="image_indivisual" class=" float-left mt-8" src="images/boy.png" alt="boy" width="100px"
+                    height="100px">
+
+                <!-- <h3 class="ml-[8rem] mt-[2rem] text-4xl"><span class="text-lg"><span id="task_number" class="ml-6">5
+                        </span> task<br></span><span id="taskType">Personal </span></h3> -->
+                <!-- indivisual All Task -->
+                <!-- <div id="indivisualtask_wrapper"
+                    class=" font-thin font-serif text-white ml-[3%] mt-[10%]  w-[94%] max-h-[90%] flex flex-col gap-4 overflow-scroll"> -->
+                    <!-- <div class="task_indivisual relative group grid grid-cols-6 grid-flow-col bg-purple-500 rounded-md cursor-pointer ">
+                        <input
+                            class="checkbox relative m-2 w-[20px] h-[20px] bg-white appearance-none ring-1 ring-gray-950 rounded-full "
+                            type="checkbox">
+                        <label for="checkbox" class=" flex justify-center m-2  text-sm  w-[70%]">Going doloribus
+                            illo. to play
+                        </label>
+                        <img class="ticmark absolute left-[0.5rem] mt-[10px] w-[17px] h-[17px] hidden group-hover:block"
+                            src="images/tic.png" alt="ticmark">
+                        <img class="absolute mt-4 w-[20px] h-[20px] right-[1rem] hover:scale-125 "
+                            src="images/delete.png" alt="">
+                    </div> -->
+                <!-- </div> -->
+
+            </div>
+        </div>
+
+        <!-- Main Task Page-->
+        <div
+            class="mainpage relative w-[100%]  text-black flex justify-center flex-row items-start transition duration-1000 ease-in-out ">
+            <div class="hidden md:block bg-fuchsia-700 md:max-h-screen min-w-[30%] h-screen"></div>
+            <div
+                class="relative bg-gray-400 min-w-[100%] md:min-w-[70%] h-screen rounded-3xl md:rounded-none overflow-hidden">
+                <!-- Head Wrapper -->
+                <div class="relative min-w-[100%] h-[60vh] bg-yellow-400 rounded-b-[30%]">
+
+                    <img class="toggle mx-5 pt-5 md:invisible " src="images/dash3.png" alt="3_dash" width="34px"
+                        height="34px">
+                    <div class="font-serif text-sm w-[30rem] h-[200px] mx-[1rem] mt-4">
+                        <h3 class="text-2xl space-x">Heyyy Johnnn !</h3>
+                        <h6 class="text-lg font-extralight text-gray-600">Today You have&nbsp;&nbsp;<span id="task_size">5</span>&nbsp;task todo</h6>
+                    </div>
+                    <div class=" float-right mr-[3rem] -mt-[12rem] rounded-full bg-white w-[75px] h-[75px] "></div>
+                    <img class="float-right w-[80px] h-[80px] mr-[2.9rem] -mt-[12rem] " src="images/person.png"
+                        alt="preson">
+
+                </div>
+                <!-- Task wrapper -->
+                <div id="categoryDiv"
+                    class="taskwrapper relative -mt-44 h-[412px] md:h-[412px] overflow-y-scroll flex space-y-4 flex-col ">
+                    <!-- All Task -->
+
+                    <!-- <div  class="task group mx-auto md:mx-auto mt-10 text-xl w-[85%] md:w-[85%] p-2
+                          bg-gray-300 rounded-xl shadow-md shadow-slate-700 py-4 
+                            hover:-translate-y-2 transition 500 ease-in-out">
+                        <img class="float-left w-[70px] h-[70px]" src="images/boy.png" alt="boy">
+                        <img class="float-right opacity-60 invisible group-hover:visible mt-6 w-[20px] h-[20px]" src="images/dot3.png"
+                            alt="dot3">
+                        <h3 class="mr-28 float-right">Personal <span class="text-lg"><br>5 task Only </span></h3>
+                    </div> -->
+
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Blur Div -->
+        <div onclick="movetop()" class="blurdiv md:w-[70%] md:left-[30%]"></div>
+
+        <!-- task Adder -->
+        <img class="taskaddbtn absolute  bottom-5 right-5 bg-yellow-200 rounded-full transition duration-500 ease-in-out"
+            src="images/add.png" alt="" width="50px" height="50px">
+        <div class="addTask  bg-purple-400 min-w-[100%] md:min-w-[70%] md:right-0 h-[40vh] absolute
+             -bottom-[5addbtn0%] rounded-t-[50%] shadow-2xl shadow-slate-950 
+             hover:shadow-sm flex justify-center  transition duration-500 ease-in-out ">
+            <div class="absolute top-7  grid grid-row-6 justify-center h-[70%] w-[60%] py-8 rounded-xl">
+                <label for="taskname">Task</label>
+                <input class="p-1 px-7 rounded-md" 1ype="text" name="text" placeholder="Enter Task" id="taskname">
+                <label for=
+                "category">category</label>
+                <select class="p-1 px-7  rounded-md" name="relative" id="category_type">
+                    <option value="Personal">Personal</option>
+                    <option value="Work">Work</option>
+                    <option value="Shopping">Shopping</option>
+                    <option value="Coding">Coding</option>
+                    <option value="Health">Health</option>
+                    <option value="Fitness">Fitness</option>
+                    <option value="Education">Education</option>
+                    <option value="Finance">Finance</option>
+                </select>
+                <div class="relative grid grid-cols-2 top-2">
+                    <button class="absolute right-[4rem] bg-gray-200 rounded-sm w-[3rem] hover:bg-yellow-300"
+                        type="reset" onclick="resetTask()">cancel</button>
+                    <button id="addNewTask"
+                        class="absolute  right-[0.5rem]  bg-gray-200 rounded-sm w-[3rem] hover:bg-yellow-300 ">add</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+<script src="index.js"></script>
+
+</html>

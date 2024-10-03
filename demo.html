@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="flex justify-center mt-[200px] ">
+  <pre>
+    <div id="click"  class="bg-violet-500 w-[100px] h-[30px] flex justify-center items-center cursor-pointer hover:bg-gray-400 ">click me</div>
+    <input id="inpt" type="text" placeholder="Enter Name" >
+    <button onclick="show" class="ring-2 w-[100px]">click</button>
+    <div id="showw" class="bg-purple-700 w-[300px] h-[30px]"></div>
+  
+  </pre>
+</body>
+<script>
+
+function show()
+{
+  const inptValue=document.getElementById('inpt').value
+  localStorage.setItem('x',inptValue)
+  const z=[2,4,9,8,6]
+  localStorage.setItem('arr',JSON.stringify(z))
+  const k=localStorage.getItem('arr')
+  const xx=JSON.parse(k)
+  document.getElementById('showw').innerHTML=xx[4]
+}
+
+</script>
+</html>
+ 

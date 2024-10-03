@@ -1,0 +1,34 @@
+.mainWrapperMove{
+     transform:translateX(-100%);
+
+}
+
+.addtaskWrapperTop{
+    transform:translateY(-100%);
+}
+.addbtntglTop{
+    transform: translateY(-450%) rotate(45deg);
+}
+.addbtntglButtom{
+    transform: translateY(0%) rotate(0deg);
+    transition: all 0.5s ease-in ;
+}
+.backdropblur{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    backdrop-filter: blur(3px);
+}
+.taskwrapper::-webkit-scrollbar{
+    display: none;
+    
+}
+.indivisualtask_wrapper::-webkit-scrollbar{
+    display: none;
+}
+.task_complete{
+    text-decoration: line-through;
+
+}
